@@ -1,6 +1,7 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 
+vaultUrl = 'http://vault.meltmedia.com/public/resource/'
 pkg = require "./package.json"
 
 module.exports =
@@ -72,6 +73,11 @@ module.exports =
         meltmediaApi:
           path: /^\/api\/.+/
           domain: pkg.proxy
+    
+    vault:
+      resources:
+        'gazyva_hcp_ind_fl':
+          'url': vaultUrl + '61df1d0e-124c-483a-84f3-c026b933beef'
 
   regenerateDelay: 500
 
