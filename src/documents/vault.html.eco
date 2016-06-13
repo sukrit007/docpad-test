@@ -1,0 +1,3 @@
+<div data-vault-guid="61df1d0e-124c-483a-84f3-c026b933beef">
+  <%- @vault.resources['gazyva_hcp_ind_fl'] %>
+</div>
