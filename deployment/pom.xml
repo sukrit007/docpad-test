@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.gene.docpad-test.cadmium</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  
+  <artifactId>deployment</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+  <name>docpad-test :: deployment</name>
+  <description>Parent module for backend modules</description>
+
+  <properties>
+    <cadmium.groupId>com.meltmedia.cadmium</cadmium.groupId>
+    <cadmium.version>1.0.1</cadmium.version>
+    <meltmedia.cadmium.version>1.1.1</meltmedia.cadmium.version>
+  </properties>
+
+  <build>
+
+    <!-- Define plugins that apply to all backend modules -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <!-- Declare plugin definition for all projects here -->
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>com.meltmedia.cadmium.jetty.Launcher</mainClass>
+              </manifest>
+            </archive>
+            <overlays>
+              <overlay>
+                <groupId>${cadmium.groupId}</groupId>
+                <artifactId>cadmium-war</artifactId>
+              </overlay>
+            </overlays>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+
+  <dependencyManagement>
+    <!-- All backend dependencies versions should be declared in deployment project -->
+    <dependencies>
+      <dependency>
+        <groupId>${cadmium.groupId}</groupId>
+        <artifactId>cadmium-war</artifactId>
+        <version>${cadmium.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.logback-extensions</groupId>
+        <artifactId>logback-ext-loggly</artifactId>
+        <version>0.1.1</version>
+        <scope>runtime</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>war</module>
+  </modules>
+
+</project>

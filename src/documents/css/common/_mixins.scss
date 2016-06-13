@@ -1,0 +1,173 @@
+@mixin borderRadius ($radius) {
+  // This mixin sets a border-radius on an element
+
+  // $radius: what value should the border-radius have?
+
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  border-radius:         $radius;
+  zoom: 1;
+}
+
+@mixin boxSizing ($value) {
+  // This mixin is for setting the box-sizing value on an element
+
+  // $value: what box model should the element use?
+
+  -webkit-box-sizing: $value;
+  -moz-box-sizing:    $value;
+  box-sizing:         $value;
+}
+
+@mixin calc ($expression, $property: 'width') {
+  // This mixin is for using the calc function when defining a length
+
+  // $expression: what value should the calc function have?
+  // $property: what property should the length be applied to?
+
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin clearFix {
+  // This mixin is a clear fix. When elements need to have their floats cleared
+  // apply this mixin to the parent element.
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin gradient ($startColor, $endColor) {
+  // This mixin is for a vertical linear gradient background
+
+  // $startColor: what color should be at the top of the gradient?
+  // $endColor: what color should be at the bottom of the gradient?
+
+  background: $startColor; // Old browsers
+  background: -moz-linear-gradient(top, $startColor 0%, $endColor 100%); // FF3.6+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Chrome,Safari4+
+  background: -webkit-linear-gradient(top, $startColor 0%, $endColor 100%); // Chrome10+,Safari5.1+
+  background: -o-linear-gradient(top, $startColor 0%, $endColor 100%); // Opera 11.10+
+  background: -ms-linear-gradient(top, $startColor 0%, $endColor 100%); // IE10+
+  background: linear-gradient(to bottom, $startColor 0%, $endColor 100%); // W3C
+}
+
+@mixin gradientLTR ($startColor, $endColor) {
+  // This mixin is for a horizontal linear gradient background
+
+  // $startColor: what color should be at the left of the gradient?
+  // $endColor: what color should be at the right of the gradient?
+
+  background: $startColor; // Old browsers
+  background: -moz-linear-gradient(left, $startColor 0%, $endColor 100%); // FF3.6+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, $startColor), color-stop(100%, $endColor)); // Chrome,Safari4+
+  background: -webkit-linear-gradient(left, $startColor 0%, $endColor 100%); // Chrome10+,Safari5.1+
+  background: -o-linear-gradient(left, $startColor 0%, $endColor 100%); // Opera 11.10+
+  background: -ms-linear-gradient(left, $startColor 0%, $endColor 100%); // IE10+
+  background: linear-gradient(to right, $startColor 0%, $endColor 100%); // W3C
+}
+
+@mixin hideText {
+  // This mixin hides text for the image/text replacement technique
+
+  color: transparent;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+@mixin maxWidth ($maxWidth) {
+  // This mixin sets a max-width media query
+
+  // $maxWidth: what value shopuld `max-width` have in the media query?
+
+  @media only screen and (max-width : $maxWidth) {
+    @content;
+  }
+}
+
+@mixin reset {
+  // This mixin removes browser specific/default styles from certain elements
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+
+@mixin opacity ($value: 0.5) {
+  // This mixin sets the opacity of an element
+  // This works as far back as IE 7
+
+  // $value: what is the value that should be set for this element's opacity?
+
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" ($value * 100) ")";
+  filter: unquote("alpha(opacity=#{$value * 100})");
+  zoom: 1;
+}
+
+@mixin shadow ($shadows...) {
+  // This mixin applies a one or more CSS3 box shadows to an element
+  // The `...` after the variable in the mixin declaration means that you can
+  // include multiple comma separated values for the variable
+
+  // $shadows: what shadow(s) should be applied to the element?
+
+  -webkit-box-shadow: $shadows;
+  -moz-box-shadow:    $shadows;
+  box-shadow:         $shadows;
+}
+
+@mixin sprite ($x, $y, $width, $height, $display: inline-block, $path: '/images/sprite.png') {
+  // This mixin is for spriting elements. This should mostly be used in
+  // common/_sprite.scss. That stylesheet is exclusively for the use of this
+  // mixin. Storing values in new mixins (since it can't be saved as a variable)
+
+  // $x: what is the x-position on the spritesheet you are trying to access?
+  // $y: what is the y-position on the spritesheet you are trying to access?
+  // $width: what should be the width of the element?
+  // $height: what should be the height of the element?
+  // $display: what `display` value should the element have?
+  // $path: what is the path to the sprite image?
+
+  background: {
+    image: url(#{$path});
+    position: $x $y;
+    repeat: no-repeat;
+  }
+  display: $display;
+  height: $height;
+  width: $width;
+}
+
+@mixin transform ($transforms...) {
+  // This mixin is for applying one or more CSS3 transforms to an element.
+  // The `...` after the variable in the mixin declaration means that you can
+  // include multiple comma separated values for the variable
+
+  // $transforms: what transform(s) should be applied to the element?
+
+  -webkit-transform: $transforms;
+  -moz-transform:    $transforms;
+  -ms-transform:     $transforms;
+  -o-transform:      $transforms;
+  transform:         $transforms;
+}
+
+@mixin transition ($transitions...) {
+  // This mixin is for applying one or more CSS3 transitions to an element.
+  // The `...` after the variable in the mixin declaration means that you can
+  // include multiple comma separated values for the variable
+
+  // $transitions: what transition(s) should be applied to the element?
+
+  -webkit-transition: $transitions;
+  -moz-transition:    $transitions;
+  -ms-transition:     $transitions;
+  -o-transition:      $transitions;
+  transition:         $transitions;
+}

@@ -1,0 +1,10 @@
+---
+title: Page not found
+no_search: true
+---
+
+<h1>Page not found</h1>
+
+<p>The page you were trying to access is not available. You may have accessed this page via an outdated link, or typed in the URL incorrectly. You may find what you’re looking for by using the navigation above or looking through the site map below.</p>
+
+<%- @partial "nav/sitemap.html.coffee", @ %>

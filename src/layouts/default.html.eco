@@ -1,0 +1,11 @@
+---
+layout: base
+---
+
+<nav class="main" cadmium="no-index">
+  <%- @partial "nav/main.html.coffee", @ %>
+</nav>
+
+<section class="wrapper" role="main">
+  <%- @content %>
+</section>

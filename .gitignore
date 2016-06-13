@@ -1,0 +1,17 @@
+# Files
+.DS_Store
+
+# Extensions
+*.swp
+*.class
+*.log
+
+# Directories
+.grunt
+.idea
+.tmp_bower
+bower
+logs
+node_modules
+/out
+target

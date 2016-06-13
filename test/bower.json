@@ -1,0 +1,12 @@
+{
+  "name": "melt-test",
+  "version": "0.0.1",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "chai": "1.7.2",
+    "mocha": "1.8.2",
+    "requirejs": "*"
+  }
+}

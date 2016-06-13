@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Unit Tests</title>
+    <link rel="stylesheet" href="lib/bower/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <div id="test"></div>
+
+    <script src="lib/sinon.js"></script>
+    <script src="lib/bower/chai/chai.js"></script>
+    <script src="lib/bower/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="../src/files/lib/bower/jquery/jquery.js"></script>
+
+    <script src="../src/files/js/main.js"></script>
+
+    <!-- test files -->
+    <script src="tests/test.main.js"></script>
+
+    <script>
+      chai.should();
+      window.addEventListener("load", function() {
+        mocha.run();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "docpad-plugin-melt",
+  "version": "2.0.0",
+  "description": "Main Docpad plugin for meltmedia's genentech site",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "something",
+    "somethingelse"
+  ],
+  "author": "Naomi Suzuki<naomi.suzuki@meltmedia.com>",
+  "maintainers": [
+    "Naomi Suzuki<naomi.suzuki@meltmedia.com>",
+    "Alex"
+  ],
+  "contributors": [
+    "Naomi Suzuki<naomi.suzuki@meltmedia.com>"
+  ],
+  "engines": {
+    "node": ">=4.4.0",
+    "docpad": ">=6.78"
+  },
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "js-yaml": "~3.6.0",
+    "simple-glob": "~0.1.0"
+  },
+  "devDependencies": {
+    "grunt-exec": "~0.4.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-cli": "~1.2.0",
+    "coffee-script": "~1.10.0"
+  },
+  "main": "./src/melt.plugin.coffee",
+  "private" : true,
+  "scripts": {
+    "start": "grunt compile"
+  }
+}

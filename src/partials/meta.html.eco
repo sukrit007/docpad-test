@@ -1,0 +1,7 @@
+<title><%- @site.title %> | <%- @document.title %></title>
+
+<meta name="description" content="<%- @document.description %>" />
+
+<meta name="keywords" content="<%- @document.keywords %>" />
+
+<link rel="shortcut icon" href="/images/favicon.ico" />

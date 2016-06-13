@@ -1,0 +1,9 @@
+---
+  -
+    title: Home
+    path: ''
+    children:
+
+      -
+        title: Child page
+        path: child-page
