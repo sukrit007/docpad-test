@@ -60,7 +60,7 @@ module.exports = (BasePlugin) ->
       # Get the file via reading the cached copy
       viaCache = ->
         # Check the the file exists
-        path.exists resourceData.path, (exists) ->
+        fs.exists resourceData.path, (exists) ->
           # Check it exists
           return next?()  unless exists
 
