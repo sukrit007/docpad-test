@@ -71,7 +71,7 @@ module.exports =
     proxy:
       proxies:
         meltmediaApi:
-          path: /^\/api\/.+/
+          path: /^\/system\/.+/
           domain: pkg.proxy
     
     vault:

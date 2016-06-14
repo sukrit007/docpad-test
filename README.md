@@ -1,13 +1,13 @@
 # Docpad Test
 
-> Docpad Test Site
+> Docpad Test
 
 ## Running
 
 First, clone the gazyva repository, change your directory to the project root, and checkout the desired branch:
 
 ```
-git clone git@github.com:meltmedia/docpad-test.git
+git clone git@github.com:sukrit007/docpad-test.git
 cd docpad-test
 git checkout branch-name-goes-here
 ```

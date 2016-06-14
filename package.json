@@ -1,11 +1,11 @@
 {
   "name": "docpad-test",
   "version": "0.1.0",
-  "description": "Docpad Test Site",
+  "description": "Docpad Test",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/meltmedia/docpad-test.git"
+    "url": "https://github.com/sukrit007/docpad-test.git"
   },
   "scripts": {
     "preinstall": "npm cache clean",
@@ -22,7 +22,7 @@
     "docpad": "6.78.x",
     "docpad-plugin-cleanurls": "^2.8.0",
     "docpad-plugin-coffeekup": "^2.2.0",
-    "grunt-commit-plugin": "git://github.com/meltmedia/grunt-commit-plugin#feature_dependency-updates",
+    "grunt-commit-plugin": "git://github.com/meltmedia/grunt-commit-plugin#0.1.0",
     "docpad-plugin-eco": "^2.1.0",
     "docpad-plugin-handlebars": "^2.3.0",
     "docpad-plugin-jshint": "^2.2.1",
