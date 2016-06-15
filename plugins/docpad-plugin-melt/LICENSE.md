@@ -1,1 +1,0 @@
-Your plugin's license should go here

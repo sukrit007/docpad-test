@@ -1,6 +1,5 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
-
 vaultUrl = 'http://vault.meltmedia.com/public/resource/'
 pkg = require "./package.json"
 
@@ -20,7 +19,7 @@ module.exports =
     site:
 
       # The production url of our website
-      url: "http://cadmium.local:8080"
+      url: "http://cadmium.local"
 
       # The default title of our website
       title: "Docpad Test"
@@ -68,12 +67,13 @@ module.exports =
           coffeecup:
             format: false
 
-    proxy:
-      proxies:
-        meltmediaApi:
-          path: /^\/system\/.+/
-          domain: pkg.proxy
-    
+    melt:
+      proxy:
+        proxies:
+          meltmediaApi:
+            path: /^\/api\/.+/
+            domain: pkg.proxy
+
     vault:
       resources:
         'gazyva_hcp_ind_fl':

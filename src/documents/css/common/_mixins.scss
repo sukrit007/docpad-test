@@ -1,35 +1,3 @@
-@mixin borderRadius ($radius) {
-  // This mixin sets a border-radius on an element
-
-  // $radius: what value should the border-radius have?
-
-  -webkit-border-radius: $radius;
-  -moz-border-radius:    $radius;
-  border-radius:         $radius;
-  zoom: 1;
-}
-
-@mixin boxSizing ($value) {
-  // This mixin is for setting the box-sizing value on an element
-
-  // $value: what box model should the element use?
-
-  -webkit-box-sizing: $value;
-  -moz-box-sizing:    $value;
-  box-sizing:         $value;
-}
-
-@mixin calc ($expression, $property: 'width') {
-  // This mixin is for using the calc function when defining a length
-
-  // $expression: what value should the calc function have?
-  // $property: what property should the length be applied to?
-
-  #{$property}: -moz-calc(#{$expression});
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: calc(#{$expression});
-}
-
 @mixin clearFix {
   // This mixin is a clear fix. When elements need to have their floats cleared
   // apply this mixin to the parent element.

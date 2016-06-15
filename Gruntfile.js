@@ -134,11 +134,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-node-version');
-  grunt.loadNpmTasks('grunt-dependency-installer');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-commit-plugin');
 
-  grunt.registerTask('prepare', ['clean:bower', 'bower:install', 'dependency_installer', 'exec:prepareTest']);
+  grunt.registerTask('prepare', ['clean:bower', 'bower:install', 'exec:prepareTest']);
   grunt.registerTask('build', ['clean:out', 'node_version', 'exec:buildSite' ]);
   grunt.registerTask('test', ['jshint', 'connect:server', 'mocha']);
   grunt.registerTask('run', ['clean:out', 'node_version', 'exec:run']);
