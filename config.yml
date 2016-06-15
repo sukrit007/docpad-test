@@ -5,4 +5,4 @@ default:
     outdatedSafetyDuration: "5m"
   vault-safety-update: !vault-safety-update
     &vault-safety-update
-    taskPeriod: "30s"
+    taskPeriod: "1m"
