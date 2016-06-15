@@ -18,8 +18,8 @@
 
   <properties>
     <cadmium.groupId>com.meltmedia.cadmium</cadmium.groupId>
-    <cadmium.version>1.0.1</cadmium.version>
-    <meltmedia.cadmium.version>1.1.1</meltmedia.cadmium.version>
+    <cadmium.version>1.1.0-SNAPSHOT</cadmium.version>
+    <meltmedia.cadmium.version>1.2.0-SNAPSHOT</meltmedia.cadmium.version>
   </properties>
 
   <build>
