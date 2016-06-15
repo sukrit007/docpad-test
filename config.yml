@@ -3,3 +3,6 @@ default:
     &vault
     provider: "imsafe"
     outdatedSafetyDuration: "5m"
+  vault-safety-update: !vault-safety-update
+    &vault-safety-update
+    taskPeriod: "30s"
