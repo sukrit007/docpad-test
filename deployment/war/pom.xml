@@ -36,5 +36,9 @@
        <groupId>org.logback-extensions</groupId>
        <artifactId>logback-ext-loggly</artifactId>
      </dependency>
+     <dependency>
+       <groupId>com.meltmedia.cadmium</groupId>
+       <artifactId>meltmedia-cadmium-vault</artifactId>
+     </dependency>
    </dependencies>
 </project>

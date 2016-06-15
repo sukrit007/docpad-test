@@ -84,6 +84,21 @@
           </exclusion>
         </exclusions>
       </dependency>
+      <dependency>
+        <groupId>com.meltmedia.cadmium</groupId>
+        <artifactId>meltmedia-cadmium-vault</artifactId>
+        <version>${meltmedia.cadmium.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>com.meltmedia.cadmium</groupId>
+            <artifactId>cadmium-core</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
