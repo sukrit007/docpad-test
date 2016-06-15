@@ -1,0 +1,5 @@
+default:
+  vault: !vault
+    &vault
+    provider: "imsafe"
+    outdatedSafetyDuration: "5m"
