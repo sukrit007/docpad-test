@@ -48,5 +48,5 @@
     "docpad-plugin-vault":"file:local_modules/docpad-plugin-vault",
     "docpad-plugin-melt": "file:local_modules/docpad-plugin-melt"
   },
-  "proxy": "http://docpad-test.cd.meltdev.com"
+  "proxy": "http://cadmium.local"
 }
