@@ -3,6 +3,6 @@ default:
     &vault
     provider: "gvault"
     outdatedSafetyDuration: "1min"
-  vault-safety-update1: !vault-safety-update1
+  vault-safety-update: !vault-safety-update
     &vault-safety-update
     taskPeriod: "1min"
