@@ -100,7 +100,7 @@ These require Grunt to be installed globally (`npm install -g grunt-cli`)
 
 `grunt githooks`: bind the test command as a pre-commit githook
 
-`grunt test`: run [Chai](http://chaijs.com/) tests using [Mocha](http://visionmedia.github.io/mocha/)
+`grunt test`: run [Chai](http://chaijs.com/) tests using [Mocha](http://mochajs.org/)
 
 
 ## Release
